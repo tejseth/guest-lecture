@@ -27,7 +27,9 @@ class: top, left
   - Currently a Junior at the University of Michigan
   - Majoring in Information Analysis and minoring in Applied Statistics
   - Can be found at [@tejfbanalytics](https://twitter.com/tejfbanalytics)
-  - Grew up a big Lions fan 
+  - Grew up a big Lions and Matthew Stafford fan 
+  
+
   
 
 
