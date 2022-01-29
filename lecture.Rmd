@@ -29,7 +29,11 @@ class: top, left
   - Can be found at [@tejfbanalytics](https://twitter.com/tejfbanalytics)
   - Grew up a big Lions and Matthew Stafford fan 
   
+.center[![](https://d3i71xaburhd42.cloudfront.net/e64e2935a7d2565f8d29250fec9f039ed0767cde/4-Figure1-1.png)]
 
+```{r echo=FALSE, out.height= 300, out.width= 400}
+knitr::include_graphics("photos/lions.jpeg")
+```
   
 
 
