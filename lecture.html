@@ -13,7 +13,7 @@ class: center, middle, inverse, title-slide
 
 # Sports Analytics as a College Student
 ### Tej Seth
-### Kutztown University
+### SPT 313
 ### Feburary 9th, 2022
 
 ---
@@ -22,9 +22,10 @@ class: middle, center
 
 
 
+
 class: top, left
 
-# Introduction
+## Introduction
 
 - My name is __Tej Seth__ 
   - Currently a Junior at the University of Michigan
@@ -33,11 +34,22 @@ class: top, left
   - Last Summer: Research &amp; Development Intern at Pro Football Focus
   - This Summer: Risk &amp; Financial Advisory Analytics at Deloitte
 
-&lt;img src="photos/lions.jpeg" width="400" height="300" /&gt;
+&lt;img src="photos/lions.jpeg" width="400" height="300" style="display: block; margin: auto;" /&gt;
 
 ---
 
-# How I Got Into Sports Analytics
+## Why I was Interested in Sports Analytics
+
+- When I was young I was more interested in the back of baseball cards than the front
+- Didn't necessarily like math class but was better at it than other classes
+- In high school, I spent time messing around with data on Google Sheets
+  - It was tedious before I knew how to code in R...
+
+&lt;img src="https://www.loc.gov/static/exhibitions/baseball-americana/images/objects/the-art-and-science-of-baseball/the-art-of-winning/ba0075_standard.jpg" width="400" height="300" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Learning to Code
 
 - Started coding in R when I was a freshman in college
 - Wanted to recreate the graphs [@benbbaldwin](https://twitter.com/benbbaldwin) was posting on Twitter
@@ -67,21 +79,80 @@ pbp %&gt;% select(posteam, defteam, down, ydstogo, yards_gained) %&gt;% head()
 
 ---
 
-# The Next Steps
+## Putting Together Projects
 
 - Receiving feedback through constructive criticism is huge
   - Easiest avenue for this is by posting on Twitter
   - Coding with other students interested in sports analytics can be very helpful
   - Some people are worried to put their stuff out there but the community is very welcoming
-- Any coder can make a graph but can you glean analysis from it?
+  
+&lt;img src="https://www.nflfastr.com/reference/figures/card.png" style="display: block; margin: auto;" /&gt;
 
-.pull-left[![](https://lh4.googleusercontent.com/ORBY8Onl_irpgMQwDdnLLkr0ryXeLo2mY3cV19NaUJXVY_2D8NLeC63Kj_t5HwVk6v3BjH9-27biBmdJ4vzbvCN9uPGR1M0CceeQ2lY49uQnOcoGItu2pLd7vCXJUkZePmprp9OK)]
+---
 
-.pull-right[![](https://media.pff.com/2021/08/7-box-768x512.png)]
+## Data Viz Over Time (Bad Example)
+
+&lt;img src="https://lh4.googleusercontent.com/ORBY8Onl_irpgMQwDdnLLkr0ryXeLo2mY3cV19NaUJXVY_2D8NLeC63Kj_t5HwVk6v3BjH9-27biBmdJ4vzbvCN9uPGR1M0CceeQ2lY49uQnOcoGItu2pLd7vCXJUkZePmprp9OK" width="500" height="500" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Data Viz Over Time (Good Example)
+
+&lt;img src="https://media.pff.com/2021/08/7-box-768x512.png" width="690" height="500" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Getting a Sports Analytics Internship
+
+- Posting articles on a website and graphs on Twitter gets attention
+- Tweets are *fine* but making connections with people in the industry is one of the best things to do
+  - Linkedin
+  - Email
+  - Twitter Direct Messages
+- My Journey to Pro Football Focus
+  1. Got in touch with a current intern there through Twitter DM's
+  2. He gave me Eric Eager's email (the Director of Research &amp; Development)
+  3. Eric had seen my tweet and articles and knew I liked football and data
+  4. Had an interview with him + a screening with HR
   
+&lt;img src="https://csva.com/wp-content/uploads/2017/03/PFF-logo.png" width="350" height="200" style="display: block; margin: auto;" /&gt;
   
+---
+
+## Experience Working at PFF
+
+- Working in the Research &amp; Development team allowed me to grow in multiple facets
+  - Gained experience working in teams on deliverable
+  - Had my [writing](https://www.pff.com/analyst/tej-seth)
+  - Got "clout" by being invited on [podcasts](https://t.co/TNVJVhc3sT)
+  - Was given free range in creating new metrics
+- Doing sports analytics doesn't feel like work because it's sports!
+
+&lt;img src="https://media.pff.com/2021/08/4-1-768x512.png" width="350" height="250" style="display: block; margin: auto;" /&gt;
   
+---
+
+## My Process for Generating New Ideas
+
+- Think about something that isn't measured *quite* right
+- Watching a lot of football helps conjure up ideas!
+- Look into other sports and see how they are measuring performance
+- Start with early data analysis (EDA) on the topic
+- Make a simple model to see if the process is there
+- Go to an advanced model if needed
+
+
+```r
+library(nflfastR)
+library(tidyverse)
+pbp &lt;- load_pbp(2021)
+pbp_pass &lt;- pbp %&gt;%
+  filter(pass == 1, !is.na(air_yards))
+lm_air_yards &lt;- lm(air_yards ~ as.factor(down) + ydstogo + yardline_100, 
+                   data = pbp_pass)
+```
   
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
