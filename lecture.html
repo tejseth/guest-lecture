@@ -115,7 +115,7 @@ pbp %&gt;% select(posteam, defteam, down, ydstogo, yards_gained) %&gt;% head()
   3. Eric had seen my tweet and articles and knew I liked football and data
   4. Had an interview with him + a screening with HR
   
-&lt;img src="https://csva.com/wp-content/uploads/2017/03/PFF-logo.png" width="350" height="200" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://csva.com/wp-content/uploads/2017/03/PFF-logo.png" width="500" height="150" style="display: block; margin: auto;" /&gt;
   
 ---
 
@@ -123,12 +123,12 @@ pbp %&gt;% select(posteam, defteam, down, ydstogo, yards_gained) %&gt;% head()
 
 - Working in the Research &amp; Development team allowed me to grow in multiple facets
   - Gained experience working in teams on deliverable
-  - Had my [writing](https://www.pff.com/analyst/tej-seth)
+  - Had my [writing](https://www.pff.com/analyst/tej-seth) be put on PFF's website
   - Got "clout" by being invited on [podcasts](https://t.co/TNVJVhc3sT)
   - Was given free range in creating new metrics
 - Doing sports analytics doesn't feel like work because it's sports!
 
-&lt;img src="https://media.pff.com/2021/08/4-1-768x512.png" width="350" height="250" style="display: block; margin: auto;" /&gt;
+&lt;img src="https://media.pff.com/2021/08/4-1-768x512.png" width="500" height="350" style="display: block; margin: auto;" /&gt;
   
 ---
 
@@ -145,13 +145,42 @@ pbp %&gt;% select(posteam, defteam, down, ydstogo, yards_gained) %&gt;% head()
 ```r
 library(nflfastR)
 library(tidyverse)
+
 pbp &lt;- load_pbp(2021)
 pbp_pass &lt;- pbp %&gt;%
   filter(pass == 1, !is.na(air_yards))
+
 lm_air_yards &lt;- lm(air_yards ~ as.factor(down) + ydstogo + yardline_100, 
                    data = pbp_pass)
 ```
   
+---
+
+## The Future of Sports Analytics
+
+- It will be run by students like us!
+- Even if you don't decide to go into sports analytics, being able to use tools
+like R and/or Python to analyze, visualize and model data is an insanely useful skill
+to have
+- Analytics in the Pro's
+  - the __MLB__ had their "Moneyball" takeover more than a decade ago
+  - the __NBA__ just had their "Midrange" revolution
+  - the __NFL__ is next as teams start to use tracking data to their advantage
+  
+&lt;img src="https://waydev.co/wp-content/uploads/2020/01/moneyball-git-analytics.jpg" width="550" height="300" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Conclusion
+
+- Always feel free to reach out to me at:
+  - Twitter: [@tejfbanalytics](https://twitter.com/tejfbanalytics)
+  - Email: tejseth@umich.edu
+  - Linkedin: [Tej Seth](https://www.linkedin.com/in/tejseth/)
+- Thank you so much for listening to my presentation
+- Feel free to ask any questions in the zoom chat or over the mic
+
+&lt;img src="https://a3.espncdn.com/combiner/i?img=%2Fphoto%2F2021%2F0913%2Fr908439_1296x729_16%2D9.jpg" width="550" height="300" style="display: block; margin: auto;" /&gt;
 
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
