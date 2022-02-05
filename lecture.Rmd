@@ -29,7 +29,7 @@ class: top, left
   - Majoring in Information Analysis and minoring in Applied Statistics
   - Can be found at [@tejfbanalytics](https://twitter.com/tejfbanalytics)
   - Last Summer: Research & Development Intern at Pro Football Focus
-  - This Summer: Risk & Financial Advisory Analytics at Deloitte
+  - This Summer: Risk Analytics Intern outside of the sports world
 
 ```{r echo=FALSE, out.height= 300, out.width= 400,, fig.align='center'}
 knitr::include_graphics("photos/lions.jpeg")
@@ -67,7 +67,7 @@ pbp %>% select(posteam, defteam, down, ydstogo, yards_gained) %>% head()
 
 ---
 
-## Putting Together Projects
+## Putting Projects Together
 
 - Receiving feedback through constructive criticism is huge
   - Easiest avenue for this is by posting on Twitter
