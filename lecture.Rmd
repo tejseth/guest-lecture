@@ -110,7 +110,7 @@ knitr::include_graphics("https://media.pff.com/2022/04/6-draft21-1536x1097.png")
   - Twitter Direct Messages
 - **Bottom Line: Doing good public work will get you noticed**
 
-```{r echo = FALSE, fig.align = 'center', out.height = 250, out.width= 375}
+```{r echo = FALSE, fig.align = 'center', out.height = 300, out.width= 450}
 knitr::include_graphics("https://dca.wharton.upenn.edu/wp-content/uploads/2021/04/NFLBigdata-bowlteam.jpg")
 ```
 
